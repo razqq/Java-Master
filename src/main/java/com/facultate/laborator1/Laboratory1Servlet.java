@@ -30,10 +30,10 @@ public class Laboratory1Servlet extends HttpServlet {
 
             if (size != null) {
                 out.println(String.format("<div>Word permutations of length <%s></div>", size));
-                out.println(WordPermutations.getPermutationsOfLength(word, "", Integer.parseInt(size)));
+                out.println(WordPermutations.getPermutationsOfLength(word, Integer.parseInt(size)));
             } else {
                 out.println("<div>Word permutations of all lengths since size is not specified</div>");
-                out.println(WordPermutations.getAllPermutations(word, ""));
+                out.println(WordPermutations.getAllPermutations(word));
             }
         } else {
             out.println("<div>No word received</div>");

@@ -7,25 +7,29 @@ public class WordPermutations {
 
     private static Set<String> permutations = new HashSet<>();
 
-    static public Set<String> getAllPermutations(String word, String answer) {
+    static public Set<String> getAllPermutations(String word){
         permutations.clear();
+        getAllPermutationsRecursive(word, "");
+        return permutations;
+    }
+
+    static private void getAllPermutationsRecursive(String word, String answer) {
         if (word.length() == 0) {
             permutations.add("<p>" + answer + "</p>");
-
+            return;
         }
 
         for (int i = 0; i < word.length(); i++) {
             char character = word.charAt(i);
             String restOfWord = word.substring(0, i) + word.substring(i + 1);
-            getAllPermutations(restOfWord, answer + character);
+            getAllPermutationsRecursive(restOfWord, answer + character);
         }
-        return permutations;
     }
 
-    static public Set<String> getPermutationsOfLength(String word, String answer, int length) {
+    static public Set<String> getPermutationsOfLength(String word, int length) {
         permutations.clear();
-        getAllPermutations(word, answer);
-        permutations.removeIf(permutation -> permutation.length() != length);
+        getAllPermutationsRecursive(word, "");
+        permutations.removeIf(permutation -> permutation.length() - "<p></p>".length() != length);
         return permutations;
     }
 }

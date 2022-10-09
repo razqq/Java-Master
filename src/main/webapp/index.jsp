@@ -8,6 +8,10 @@
 <h1><%= "First laboratory" %>
 </h1>
 <br/>
-<a href="lab1-servlet?word=anaare">First laboratory</a>
+<form action="lab1-servlet" method="get">
+    Word: <input name="word" value="anaare"> <br/>
+    Size:  <input name="size" value="3"> <br/>
+    <input type="submit" value="Send data">
+</form>
 </body>
 </html>

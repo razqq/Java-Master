@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class WordDictionary {
     public static Set<String> words = new HashSet<>();
-    private static final String dictionaryPath = "/Users/razcro/Desktop/Facultate/Java/Java-Master/src/main/java/com/facultate/laborator1/dictionary.txt";
+    private static final String dictionaryPath = "/Users/razcro/Desktop/Facultate/Java/Laboratory1/src/main/java/com/facultate/laborator1/dictionary.txt";
 
     public static boolean checkDictionaryFileExists(){
         File file = new File(dictionaryPath);

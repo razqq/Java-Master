@@ -20,7 +20,7 @@ public class Laboratory1Servlet extends HttpServlet {
 
     public void init() {
         try {
-            fileHandler = new FileHandler("/Users/razcro/Desktop/Facultate/Java/Java-Master/logs/requests_logs.log", true);
+            fileHandler = new FileHandler("/Users/razcro/Desktop/Facultate/Java/Laboratory1/logs/requests_logs.log", true);
         } catch (IOException e) {
             e.printStackTrace();
         }

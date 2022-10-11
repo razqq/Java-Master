@@ -22,7 +22,8 @@
   - ✅ If the dictionary is large enough, the servlet may take some time in order to create the response.
     Analyze concurrency issues and resource contention, invoking the servlet repeatedly, in an asynchronous manner  
   ``Called the servlet asynchronously with a python script and got the following results:``
-  ```For 10 async calls: Duration = 0.216743095 s, Successful requests = 9, Failed requests = 1
+  ```
+    For 10 async calls: Duration = 0.216743095 s, Successful requests = 9, Failed requests = 1
     For 50 async calls: Duration = 0.751326118 s, Successful requests = 32, Failed requests = 18
     For 100 async calls: Duration = 1.5155016569999997 s, Successful requests = 64, Failed requests = 36
     For 500 async calls: Duration = 7.1115265370000005 s, Successful requests = 376, Failed requests = 124

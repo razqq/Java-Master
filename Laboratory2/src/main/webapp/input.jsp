@@ -8,9 +8,10 @@
 <h1><%= "Input files" %>
 </h1>
 <br/>
-<form action="lab2-servlet" method="POST">
+<form action="captcha" method="GET">
     Word: <input name="word" value="anaare"> <br/>
     Size:  <input name="size" value="3"> <br/>
+    Category: <input name="category" value="test"> <br/>
     <input type="submit" value="Send data">
 </form>
 </body>

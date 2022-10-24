@@ -28,8 +28,6 @@ public class Filter extends HttpFilter {
         chain.doFilter(req, wrapper);
         //Get the dynamically generated content from the decorator
         String content = wrapper.toString();
-        // Modify the content
-        content += "<p> MID STAGE!!</p>";
         //Send the modified content using the original response
         PrintWriter out = res.getWriter();
         out.write(PRELUDE + content + CODA);

@@ -8,11 +8,23 @@
 </head>
 <body>
 <h1> Returned Words </h1>
+
+
 <%
+    String wordd ="no input";
+    if (request.getAttribute("word") != null) {
+        wordd = (String) request.getAttribute("word");
+    }
+    String size = "nu input";
+    if (request.getAttribute("size") != null) {
+        size = (String) request.getAttribute("word");
+    }
     if (request.getAttribute("wordsReturned") != null) {
         Set<String> words = (HashSet<String>) request.getAttribute("wordsReturned");
 %>
 
+<h2><%=wordd%></h2>
+<h2><%=size%></h2>
 <ul>
     <%for (String word : words) { %>
     <li><%= word%>
